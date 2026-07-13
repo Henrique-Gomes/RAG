@@ -18,3 +18,4 @@
 * Move secrets into keyvault
 * Include k8s health checks
 * Automatically manage app version
+* Improving chunking (the current approach is pretty lame)
