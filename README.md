@@ -1,0 +1,20 @@
+# How to use
+
+1. Put your gemini api key in `k8s/labarq-rag.yaml` (this will change whenever I start using a keyvault)
+2. Build the docker image by executing `eval $(minikube docker-env); docker build -t labarq-rag:0.6 .`
+3. Add [rag.com](http://rag.com) to your `/etc/host`
+  1. Execute `minikube ip` to get the IP address of your localcluster
+  2. Add `<previous IP address>    rag.com`
+4. Apply both yaml files inside the `k8s` folder (`kubectl apply -f <filename>`)
+
+# Requirements
+
+* Docker
+* Minikube
+* Kubectl
+
+# TODO
+
+* Move secrets into keyvault
+* Include k8s health checks
+* Automatically manage app version
