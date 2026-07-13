@@ -4,7 +4,7 @@
 2. Build the docker image by executing `eval $(minikube docker-env); docker build -t labarq-rag:0.6 .`
 3. Add `rag.com` to your `/etc/host`
    1. Execute `minikube ip` to get the IP address of your localcluster
-   2. Add `<previous IP address>    rag.com`
+   2. Add `<previous IP address>    rag.com` to `/etc/host`
 4. Apply both yaml files inside the `k8s` folder (`kubectl apply -f <filename>`)
 5. Apply migrations
    1. Get the name of the labarq-rag pod with `kubectl get pods`
