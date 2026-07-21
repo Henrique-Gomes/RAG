@@ -1,0 +1,10 @@
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - script: |
+      docker build -t labarq-rag:$(Build.BuildId) .
+    displayName: Build Docker image
